@@ -10,4 +10,9 @@ class LandingPageController extends Controller
     {
         return view('landingpage');
     }
+
+    public function produk()
+    {
+        return view('produk-page');
+    }
 }

@@ -16,10 +16,11 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
                 poppins: 'Poppins',
+                inter: 'Inter',
             },
             colors: {
                 'primary' : '#E38B29',
-                'zinc': '#52525b',
+                'zinc': '#9ca3af',
                 'slate': '#f3f4f6',
             }
         },

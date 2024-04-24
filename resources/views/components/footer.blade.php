@@ -1,4 +1,4 @@
-<div class="bg-white border-t-2 py-16 text-primary">
+<div class="bg-white border-t-2 py-16 text-primary font-poppins">
     <div class="grid grid-cols-2">
       <div class="flex flex-col justify-center items-center">
         <h1 class="text-3xl font-bold">Indah Furniture</h1>
