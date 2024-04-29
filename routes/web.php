@@ -9,8 +9,12 @@ Route::get('/', [LandingPageController::class, 'index'])->name('landingpage');
 Route::get('/produk', [LandingPageController::class, 'produk'])->name('produk');
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('dashboard.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/pemesanan', function () {
+    return view('dashboard.pemesanan');
+})->middleware(['auth', 'verified'])->name('pemesanan');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

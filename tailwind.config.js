@@ -22,6 +22,7 @@ export default {
                 'primary' : '#E38B29',
                 'zinc': '#9ca3af',
                 'slate': '#f3f4f6',
+                'abu': '#374151'
             }
         },
     },

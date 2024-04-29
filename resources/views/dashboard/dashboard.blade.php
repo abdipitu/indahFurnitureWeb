@@ -1,20 +1,24 @@
 <x-app-layout>
-    <x-slot name="header">
+    {{-- <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Dashboard') }}
         </h2>
-    </x-slot>
+    </x-slot> --}}
 
     <div class="flex flex-row">
-        <div class="w-2/12">
-            <p>Ini untuk sidebar</p>
-        </div>
-        <div class="w-10/12">
+        <x-sidebar></x-sidebar>
+
+        <div class="w-10/12 font-inter">
+
+            <div class="px-8 pt-8">
+                <h1 class="font-semibold text-lg text-black">Dashboard</h1>
+            </div>
+            
             <div class="py-12">
                 <div class="w-full mx-auto sm:px-6 lg:px-8">
                     <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                        <div class="p-6 text-gray-900">
-                            <p>Selamat datang {{ Auth::user()->name }}</p>
+                        <div class="p-6 text-abu">
+                            <p>Selamat datang <span class="font-semibold text-black">{{ Auth::user()->name }}</span></p>
                         </div>
                     </div>
                 </div>
@@ -28,7 +32,7 @@
             <div class="py-12">
                 <div class="w-full mx-auto sm:px-6 lg:px-8">
                     <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                        <div class="p-6 text-gray-900">
+                        <div class="p-6 text-abu">
                             <div class="flex justify-evenly items-center">
                                 <div>
                                     <p>Jumlah Pesanan bulan ini.</p>
