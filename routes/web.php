@@ -16,6 +16,14 @@ Route::get('/pemesanan', function () {
     return view('dashboard.pemesanan');
 })->middleware(['auth', 'verified'])->name('pemesanan');
 
+Route::get('/pembayaran', function () {
+    return view('dashboard.pembayaran');
+})->middleware(['auth', 'verified'])->name('pembayaran');
+
+Route::get('/produkadmin', function () {
+    return view('dashboard.produk');
+})->middleware(['auth', 'verified'])->name('produkadmin');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

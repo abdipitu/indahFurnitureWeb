@@ -8,14 +8,14 @@
     <div class="flex flex-row">
         <x-sidebar></x-sidebar>
 
-        <div class="w-10/12 font-inter">
+        <div class="w-10/12 font-inter py-16">
 
-            <div class="px-8 pt-8">
+            <div class="px-20 pt-8">
                 <h1 class="font-semibold text-lg text-black">Dashboard</h1>
             </div>
             
             <div class="py-12">
-                <div class="w-full mx-auto sm:px-6 lg:px-8">
+                <div class="w-full mx-auto sm:px-6 lg:px-20">
                     <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                         <div class="p-6 text-abu">
                             <p>Selamat datang <span class="font-semibold text-black">{{ Auth::user()->name }}</span></p>
@@ -25,12 +25,12 @@
             </div>
 
             <div class="w-full">
-                <div class="border border-3 px-8">
+                <div class="border border-3 mx-20">
                 </div>
             </div>
 
             <div class="py-12">
-                <div class="w-full mx-auto sm:px-6 lg:px-8">
+                <div class="w-full mx-auto sm:px-6 lg:px-20">
                     <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                         <div class="p-6 text-abu">
                             <div class="flex justify-evenly items-center">

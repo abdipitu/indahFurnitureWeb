@@ -20,6 +20,7 @@ export default {
             },
             colors: {
                 'primary' : '#E38B29',
+                'primaryhover': '#a64717',
                 'zinc': '#9ca3af',
                 'slate': '#f3f4f6',
                 'abu': '#374151'
