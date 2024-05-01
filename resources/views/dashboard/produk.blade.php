@@ -15,7 +15,9 @@
                     class="mt-12"
                     />
                 </div>
-                <a href="#" class="py-1 px-4 bg-primary text-white rounded-lg hover:bg-primaryhover">Add +</a>
+                <a href="#" class="py-1 px-4 bg-primary text-white rounded-lg hover:bg-primaryhover
+                
+                ">Add +</a>
             </div>
         </div>
     </div>

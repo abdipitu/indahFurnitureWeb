@@ -10,10 +10,26 @@
 </head>
 
 <body>
+    @php
+        $u = 20;
+    @endphp
     <x-navbar />
-    <div class="w-full h-screen bg-white text-primary font-poppins">
+    <div class="w-full min-h-screen bg-white text-primary font-poppins">
         <div class="py-24 px-32">
-           <x-judul-halaman-produk jumlahproduk="16" />
+            <x-judul-halaman-produk jumlahproduk="{{ $u }}" />
+        </div>
+        <div class="px-32">
+            <div class="grid grid-cols-4 justify-evenly mb-10">
+                @for ($i = 0; $i < $u; $i++)
+                    @component('components.card', [
+                        'img' => '/images/furniture.jpg',
+                        'name' => 'Sofa',
+                        'price' => '4.500.000',
+                        'stok' => '10',
+                    ])
+                    @endcomponent
+                @endfor
+            </div>
         </div>
     </div>
     <x-footer />
