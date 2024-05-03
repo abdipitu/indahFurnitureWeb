@@ -7,6 +7,7 @@ use App\Http\Controllers\LandingPageController;
 
 Route::get('/', [LandingPageController::class, 'index'])->name('landingpage');
 Route::get('/produk', [LandingPageController::class, 'produk'])->name('produk');
+Route::get('/deskripsiproduk', [LandingPageController::class, 'deskripsiproduk'])->name('deskripsiproduk');
 
 Route::get('/dashboard', function () {
     return view('dashboard.dashboard');

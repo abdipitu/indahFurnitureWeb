@@ -29,7 +29,7 @@
                         @endif
 </div> --}}
 
-<div class="text-white bg-primary py-1.5 px-3 rounded-full">
+<div class="text-white bg-primary py-1.5 px-3 rounded-full hover:bg-primary hover:shadow-lg focus:outline-none">
     @if (Route::has('login'))
         <div>
             @auth

@@ -4,8 +4,8 @@
             <div class="dropdown dropdown-hover">
                 <label class="my-2" tabindex="0">Beranda</label>
                 <div class="dropdown-menu dropdown-menu-bottom-right">
-                    <a class="dropdown-item text-sm">Kategori</a>
-                    <a tabindex="-1" class="dropdown-item text-sm">Produk</a>
+                    <a href="#" class="dropdown-item text-sm">Kategori</a>
+                    <a href="#" tabindex="-1" class="dropdown-item text-sm">Produk</a>
                 </div>
             </div>
         </div>

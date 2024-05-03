@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite('resources/css/app.css')
-    <title>Document</title>
+    <title>Produk Page</title>
 </head>
 
 <body>
     @php
-        $u = 20;
+        $u = 16;
     @endphp
     <x-navbar />
-    <div class="w-full min-h-screen bg-white text-primary font-poppins">
+    <div class="w-full min-h-screen bg-white text-primary font-inter">
         <div class="py-24 px-32">
             <x-judul-halaman-produk jumlahproduk="{{ $u }}" />
         </div>
@@ -31,8 +31,8 @@
                 @endfor
             </div>
         </div>
+        <x-footer />
     </div>
-    <x-footer />
 </body>
 
 </html>
