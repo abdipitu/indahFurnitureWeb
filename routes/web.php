@@ -25,6 +25,10 @@ Route::get('/produkadmin', function () {
     return view('dashboard.produk');
 })->middleware(['auth', 'verified'])->name('produkadmin');
 
+Route::get('/tambahproduk', function () {
+    return view('dashboard.tambahproduk');
+})->middleware(['auth', 'verified'])->name('tambahproduk');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
