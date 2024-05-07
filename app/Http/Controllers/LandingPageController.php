@@ -17,6 +17,6 @@ class LandingPageController extends Controller
     }
     public function deskripsiproduk()
     {
-        return view('deskripsi-produk-page');
+        return view('deskripsi-produk-page');   
     }
 }

@@ -6,18 +6,18 @@
             <a href="#" class="flex gap-2 items-center">Lihat Koleksi <x-svg-arrow-right /></a>
         </div>
         <div class="flex flex-col lg:flex-row gap-4">
-            <div class="bg-white py-7 w-full border-2 rounded-lg hover:bg-primary text-primary hover:text-white">
+            <div class="bg-white py-7 w-full border-2 rounded-lg hover:bg-primary text-primary hover:text-white"> 
                 <h1 class="font-bold text-lg mx-5">Tempat Duduk</h1>
-              </div>
+            </div>
             <div class="bg-white py-7 w-full border-2 rounded-lg hover:bg-primary text-primary hover:text-white">
                 <h1 class="font-bold text-lg mx-5">Meja</h1>
-              </div>
+            </div>
             <div class="bg-white py-7 w-full border-2 rounded-lg hover:bg-primary text-primary hover:text-white">
                 <h1 class="font-bold text-lg mx-5">Ranjang</h1>
-              </div>
+            </div>
             <div class="bg-white py-7 w-full border-2 rounded-lg hover:bg-primary text-primary hover:text-white">
                 <h1 class="font-bold text-lg mx-5">Lemari</h1>
-              </div>
+            </div>
         </div>
     </div>
 </div>
