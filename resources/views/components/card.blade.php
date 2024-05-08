@@ -1,5 +1,6 @@
 @props(['img', 'name', 'price', 'category', 'stok'])
 
+{{-- @foreach ($produk as $item) --}}
 <a href="/deskripsiproduk">
     <div class="w-64 bg-white border shadow hover:shadow-lg hover:shadow-primary flex justify-center mb-5">
         <div class="p-2">
@@ -21,3 +22,4 @@
         </div>
     </div>
 </a>
+{{-- @endforeach --}}

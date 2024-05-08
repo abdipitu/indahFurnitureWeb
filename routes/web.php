@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\LandingPageController;
 
@@ -36,3 +38,9 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::post('/tambah', [ProdukController::class, 'index'])->name('tambah');
+Route::get('/test', [ProdukController::class, 'test'])->name('test');
+Route::get('/card', [ProdukController::class, 'card'])->name('card');
+Route::get('/testket', [ProdukController::class, 'testket'])->name('testket');
+
