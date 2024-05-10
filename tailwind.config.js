@@ -28,5 +28,5 @@ export default {
         },
     },
 
-    plugins: [forms, require("daisyui"), require("rippleui")],
+    plugins: [forms, require("rippleui"), require("daisyui")],
 };

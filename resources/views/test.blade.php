@@ -17,8 +17,8 @@
         </div>
     </div>
 
-    <div class="w-full h-screen bg-white">
-        <a href="/deskripsiproduk" class="grid grid-cols-4 font-inter mx-40 py-40">
+    <div class="w-full min-h-screen bg-white">
+        <a href="/testket" class="grid grid-cols-4 font-inter mx-40 py-40">
             @foreach ($produk as $item)
                 <div class="w-64 bg-white border shadow hover:shadow-lg hover:shadow-primary flex justify-center mb-5">
                     <div class="p-2">

@@ -32,7 +32,7 @@ class ProdukController extends Controller
             'jumlah' => $request->jumlah,
         ]);
 
-        return redirect()->route('test');
+        return redirect()->route('produkadmin');
     }
 
     public function testket()
@@ -47,5 +47,11 @@ class ProdukController extends Controller
             ];
         });
         return view('testket', compact('produk'));
+    }
+
+    public function showproduk()
+    {
+        $produk = Produk::all();
+        return view('dashboard.produk', compact('produk'));
     }
 }

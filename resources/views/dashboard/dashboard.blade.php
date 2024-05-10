@@ -11,7 +11,7 @@
         <div class="w-10/12 font-inter py-16">
 
             <div class="px-20 pt-8">
-                <h1 class="font-semibold text-lg text-black">Dashboard</h1>
+                <h1 class="font-semibold text-xl text-black">Dashboard</h1>
             </div>
 
             <div class="py-12">

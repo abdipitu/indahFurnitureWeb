@@ -23,9 +23,7 @@ Route::get('/pembayaran', function () {
     return view('dashboard.pembayaran');
 })->middleware(['auth', 'verified'])->name('pembayaran');
 
-Route::get('/produkadmin', function () {
-    return view('dashboard.produk');
-})->middleware(['auth', 'verified'])->name('produkadmin');
+Route::get('/produkadmin', [ProdukController::class, 'showproduk'])->middleware(['auth', 'verified'])->name('produkadmin');
 
 Route::get('/tambahproduk', function () {
     return view('dashboard.tambahproduk');
@@ -43,4 +41,5 @@ Route::post('/tambah', [ProdukController::class, 'index'])->name('tambah');
 Route::get('/test', [ProdukController::class, 'test'])->name('test');
 Route::get('/card', [ProdukController::class, 'card'])->name('card');
 Route::get('/testket', [ProdukController::class, 'testket'])->name('testket');
+// Route::get('/', [ProdukController::class, 'testket'])->name('testket');
 
