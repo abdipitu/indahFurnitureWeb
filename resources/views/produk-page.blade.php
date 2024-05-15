@@ -19,17 +19,7 @@
             <x-judul-halaman-produk jumlahproduk="{{ $jumlahProduk }}" />
         </div>
         <div class="px-32">
-            <div class="grid grid-cols-4 justify-evenly mb-10">
-                {{-- @for ($i = 0; $i < $u; $i++)
-                    @component('components.card', [
-                        'img' => '/images/furniture.jpg',
-                        'name' => 'Sofa',
-                        'price' => '4.500.000',
-                        'stok' => '10',
-                    ])
-                    @endcomponent
-                @endfor --}}
-
+            <a href="/deskripsiproduk/{ $id }" class="grid grid-cols-4 justify-evenly mb-10">
                 @foreach ($produk as $item)
                 <div class="w-64 bg-white border shadow hover:shadow-lg hover:shadow-primary flex justify-center mb-5">
                     <div class="p-2">
@@ -51,6 +41,7 @@
                     </div>
                 </div>
             @endforeach
+            </a>
             </div>
         </div>
         <x-footer />

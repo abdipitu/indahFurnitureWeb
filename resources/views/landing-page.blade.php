@@ -13,11 +13,11 @@
 <body>
     <div class="w-full bg-white">
         <div class="font-inter fixed w-full z-[9999]">
-            <x-navbar />
+            <x-navbar  kategori="#kategori" produk="#produk"/>
         </div>
     </div>
     <x-hero-section />
-    <x-kategory/>
+    <x-kategory id="kategori"/>
     <x-produk-section>
         @foreach ($produk as $item)
                 <div class="w-64 bg-white border shadow hover:shadow-lg hover:shadow-primary flex justify-center mb-5">

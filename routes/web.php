@@ -9,7 +9,7 @@ use App\Http\Controllers\LandingPageController;
 
 Route::get('/', [LandingPageController::class, 'index'])->name('landingpage');
 Route::get('/produk', [LandingPageController::class, 'produk'])->name('produk');
-Route::get('/deskripsiproduk', [LandingPageController::class, 'deskripsiproduk'])->name('deskripsiproduk');
+Route::get('/deskripsiproduk/{id}', [LandingPageController::class, 'deskripsiproduk'])->name('deskripsiproduk');
 
 Route::get('/dashboard', function () {
     return view('dashboard.dashboard');
@@ -38,7 +38,10 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 Route::post('/tambah', [ProdukController::class, 'index'])->name('tambah');
+Route::post('/hapus/{id}', [ProdukController::class, 'hapus'])->name('hapus');
+Route::post('/update/{id}', [ProdukController::class, 'update'])->name('update');
 Route::get('/test', [ProdukController::class, 'test'])->name('test');
+Route::get('/edit/{id}', [ProdukController::class, 'edit'])->name('edit');
 Route::get('/card', [ProdukController::class, 'card'])->name('card');
 Route::get('/testket', [ProdukController::class, 'testket'])->name('testket');
 // Route::get('/', [ProdukController::class, 'testket'])->name('testket');

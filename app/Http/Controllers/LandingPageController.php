@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Produk;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class LandingPageController extends Controller
 {
@@ -16,11 +17,14 @@ class LandingPageController extends Controller
     public function produk()
     {
         $produk = Produk::all();
+        // $produkid = Produk::find($id);
         $jumlahProduk = Produk::count();
         return view('produk-page', compact('produk', 'jumlahProduk'));
     }
-    public function deskripsiproduk()
+    public function deskripsiproduk(string $id)
     {
-        return view('deskripsi-produk-page');   
+        $produk = Produk::find($id);
+        $data = Produk::all();
+        return view('deskripsi-produk-page', compact('produk', 'data'), ["produk" => DB::table("produks")->where('id', '=', $id)->get()]);  
     }
 }

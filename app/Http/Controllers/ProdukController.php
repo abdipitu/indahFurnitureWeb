@@ -54,4 +54,26 @@ class ProdukController extends Controller
         $produk = Produk::all();
         return view('dashboard.produk', compact('produk'));
     }
+
+    public function hapus($id)
+    {
+        $item = Produk::findOrFail($id);
+        $item->delete();
+        return redirect()->route('produkadmin');
+    }
+
+    public function edit($id)
+    {
+        $produk = Produk::findOrFail($id);
+        return view('dashboard.editproduk',compact('produk'), ["produk" => DB::table("produks")->where('id', '=', $id)->get()]);
+    }
+    
+    public function update(Request $request, $id)
+    {
+        $produk = Produk::findOrFail($id);
+        $validasiData = $request->all();
+        $produk->update($validasiData);
+        // DB::table("produks")->where('id', '=', $id)->update($request->update());
+        return redirect()->route('produkadmin');
+    }
 }

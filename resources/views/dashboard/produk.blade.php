@@ -43,9 +43,12 @@
                                     <td class="w-1/5 !text-black">{{ $item->nama }}</td>
                                     <td class="w-1/5 !text-black">{{ $item->kategori }}</td>
                                     <td class="w-1/5 !text-black">Rp. {{ $item->harga }}</td>
-                                    <td class="w-1/5 !text-black !text-center">
-                                        <a href="#" type="button" class="py-1.5 px-3 bg-blue-600 rounded-lg text-white hover:bg-blue-700">Ubah</a>
-                                        <a href="#" type="button" class="py-1.5 px-3 bg-red-600 rounded-lg text-white hover:bg-red-700">Hapus</a>
+                                    <td class="w-1/5 !text-black !text-center !flex !gap-3">
+                                        <a href="/edit/{{ $item->id }}" type="button" class="py-1.5 px-3 bg-blue-600 rounded-lg text-white hover:bg-blue-700">Ubah</a>
+                                        <form action="/hapus/{{ $item->id }}" method="post">
+                                            @csrf
+                                            <button class="py-1.5 px-3 bg-red-600 rounded-lg text-white hover:bg-red-700">Hapus</button>
+                                        </form>
                                     </td>
                                 </tr>
                                 @endforeach

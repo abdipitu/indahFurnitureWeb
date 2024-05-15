@@ -4,7 +4,7 @@
 
         <div class="w-10/12 font-inter py-16">
 
-            <x-form-produk></x-form-produk>
+            <x-form-produk action="tambah" judulHalaman="Tambah Produk"></x-form-produk>
         </div>
     </div>
 </x-app-layout>
