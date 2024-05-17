@@ -24,7 +24,7 @@ class LandingPageController extends Controller
     public function deskripsiproduk(string $id)
     {
         $produk = Produk::find($id);
-        $data = Produk::all();
+        $data[$id] = Produk::all();
         return view('deskripsi-produk-page', compact('produk', 'data'), ["produk" => DB::table("produks")->where('id', '=', $id)->get()]);  
     }
 }

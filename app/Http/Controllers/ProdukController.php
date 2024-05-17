@@ -59,7 +59,7 @@ class ProdukController extends Controller
     {
         $item = Produk::findOrFail($id);
         $item->delete();
-        return redirect()->route('produkadmin');
+        return redirect()->back()->with('success', 'Item berhasil dihapus.');
     }
 
     public function edit($id)

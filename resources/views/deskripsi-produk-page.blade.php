@@ -26,12 +26,12 @@
                 </div>
             </div>
             <div class="py-48 px-36 flex flex-col justify-center">
-                <h1 class="font-bold text-3xl">{{ $produk->nama }}</h1>
-                <h2 class="font-semibold text-xl">Rp. {{ $produk->harga }}</h2>
+                <h1 class="font-bold text-3xl">{{ $data[$id]->nama }}</h1>
+                <h2 class="font-semibold text-xl">Rp. {{ $data[$id]->harga }}</h2>
                 <div class="border my-10"></div>
                 <div class="mb-10">
                     <p>Deskripsi :</p>
-                    <p>{{ $produk->keterangan }}</p>
+                    <p>{{ $data{$id}->keterangan }}</p>
                 </div>
                 <div>
                     <x-button-keranjang></x-button-keranjang>
