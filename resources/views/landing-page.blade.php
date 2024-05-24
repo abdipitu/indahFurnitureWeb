@@ -13,16 +13,17 @@
 <body>
     <div class="w-full bg-white">
         <div class="font-inter fixed w-full z-[9999]">
-            <x-navbar  kategori="#kategori" produk="#produk"/>
+            <x-navbar kategori="#kategori" produk="#produk" />
         </div>
     </div>
     <x-hero-section />
-    <x-kategory id="kategori"/>
+    <x-kategory id="kategori" />
     <x-produk-section>
         @foreach ($produk as $item)
+            <a href="/deskripsiproduk/{{ $item->id }}">
                 <div class="w-64 bg-white border shadow hover:shadow-lg hover:shadow-primary flex justify-center mb-5">
                     <div class="p-2">
-                        <img src="{{ url('/images/furniture.jpg') }}" alt="furniture" class="mb-2">
+                        <img src="{{ asset('storage/' . $item->image_path) }}" alt="furniture" class="mb-2 h-56 mt-2 w-56 object-cover">
                         <div class="px-5">
                             <h3 class="text-black font-semibold mt-5">{{ $item->nama }}</h3>
                             <h4 class="text-primary font-medium">Rp. {{ $item->harga }}</h4>
@@ -39,7 +40,8 @@
                         </div>
                     </div>
                 </div>
-            @endforeach
+            </a>
+        @endforeach
     </x-produk-section>
     <x-footer />
 </body>

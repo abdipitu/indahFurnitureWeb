@@ -8,18 +8,16 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
-     * @return void
      */
     public function up(): void
     {
-        Schema::create('produks', function (Blueprint $table) {
+        Schema::create('pelanggan', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->string('keterangan');
-            $table->string('kategori');
-            $table->string('harga');
-            $table->integer('jumlah');
-            $table->string('image_path');
+            $table->integer('nohp');
+            $table->string('alamat');
+            $table->string('pesanan');
+            $table->string('pesan');
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('produks');
+        Schema::dropIfExists('pelanggan');
     }
 };

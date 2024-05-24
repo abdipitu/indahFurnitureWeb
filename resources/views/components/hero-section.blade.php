@@ -3,8 +3,8 @@
 ?>
 
 <div>
-    <div class="hero min-h-screen bg-white text-primary font-poppins">
-        <div class="hero-content text-left">
+    <div class="hero bg-white text-primary font-poppins">
+        <div class="hero-content text-left mt-20 mb-10">
           <div class="w-1/2">
             <h2 class="text-2xl font-semibold">Selamat Datang di</h2>
             <h1 class="text-6xl font-bold">{{ $brand }}</h1>

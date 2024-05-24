@@ -24,13 +24,33 @@ class ProdukController extends Controller
     {
         // Produk::create($request()->only(['nama', 'keterangan', 'kategori','harga', 'jumlah']));
 
-        DB::table('produks')->insert([
-            'nama' => $request->nama,
-            'keterangan' => $request->keterangan,
-            'kategori' => $request->kategori,
-            'harga' => $request->harga,
-            'jumlah' => $request->jumlah,
+        // $produk = new Produk;
+        // $produk->nama = $request->nama;
+        // $produk->keterangan = $request->keterangan;
+        // $produk->kategori = $request->categori;
+        // $produk->harga = $request->harga;
+        // $produk->image_path = $imagePath;
+        // $produk->save();
+
+        $request->validate([
+            'image_path' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
+
+        if ($request->file('image_path')) {
+            $imagePath = $request->file('image_path')->store('produks', 'public');
+            
+            DB::table('produks')->insert([
+                'nama' => $request->nama,
+                'keterangan' => $request->keterangan,
+                'kategori' => $request->kategori,
+                'harga' => $request->harga,
+                'jumlah' => $request->jumlah,
+                'image_path' => $imagePath,
+            ]);
+
+            return redirect()->route('produkadmin');
+        }
+
 
         return redirect()->route('produkadmin');
     }
@@ -65,9 +85,9 @@ class ProdukController extends Controller
     public function edit($id)
     {
         $produk = Produk::findOrFail($id);
-        return view('dashboard.editproduk',compact('produk'), ["produk" => DB::table("produks")->where('id', '=', $id)->get()]);
+        return view('dashboard.editproduk', compact('produk'), ['produk' => DB::table('produks')->where('id', '=', $id)->get()]);
     }
-    
+
     public function update(Request $request, $id)
     {
         $produk = Produk::findOrFail($id);

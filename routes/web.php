@@ -15,13 +15,17 @@ Route::get('/dashboard', function () {
     return view('dashboard.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/pemesanan', function () {
-    return view('dashboard.pemesanan');
-})->middleware(['auth', 'verified'])->name('pemesanan');
+Route::get('/user', function () {
+    return view('pengguna.dashboard');
+})->middleware(['auth', 'verified'])->name('user');
 
-Route::get('/pembayaran', function () {
-    return view('dashboard.pembayaran');
-})->middleware(['auth', 'verified'])->name('pembayaran');
+Route::get('/transaksi', function () {
+    return view('dashboard.transaksi');
+})->middleware(['auth', 'verified'])->name('transaksi');
+
+// Route::get('/pembayaran', function () {
+//     return view('dashboard.pembayaran');
+// })->middleware(['auth', 'verified'])->name('pembayaran');
 
 Route::get('/produkadmin', [ProdukController::class, 'showproduk'])->middleware(['auth', 'verified'])->name('produkadmin');
 

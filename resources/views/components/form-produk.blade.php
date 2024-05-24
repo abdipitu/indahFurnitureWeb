@@ -2,7 +2,7 @@
 
 <div class="flex flex-col justify-center items-center font-poppins mt-20">
     <h1 class="font-bold text-black text-2xl mb-10">{{ $judulHalaman }}</h1>
-    <form action="/{{ $action }}" method="post">
+    <form action="/{{ $action }}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="flex gap-5 flex-col font-semibold">
             <div class="flex flex-col">
@@ -27,10 +27,10 @@
                     <input type="text" id="jumlah" name="jumlah" class="text-black rounded-md border-primary font-medium" value="{{ $valueJumlah }}" required>
                 </div>
             </div>
-            {{-- <div class="flex flex-col mb-5">
+            <div class="flex flex-col mb-5">
                 <label for="gambar" class="text-black mb-2">Gambar</label>
-                <input type="file" id="gambar" name="gambar" class="text-black rounded-md flex justify-center items-center font-medium border-primary bg-white">
-            </div> --}}
+                <input type="file" id="gambar" name="image_path" class="text-black rounded-md flex justify-center items-center font-medium border-primary bg-white">
+            </div>
             <button class="font-inter text-white bg-primary py-1.5 px-3 rounded-full" type="submit">Simpan</button>
         </div>
     </form>

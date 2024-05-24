@@ -1,7 +1,7 @@
-<div class="pb-56 font-poppins w-full bg-white" id="kategori">
+<div class="pb-24 font-poppins w-full bg-white" id="kategori">
     <div class="flex flex-col justify-center px-32">
-        <h1 class="font-bold text-4xl text-primary mb-4">Kategori Unggulan</h1>
-        <div class="text-zinc font-medium text-xl flex justify-between mb-10">
+        <h1 class="font-bold text-4xl text-primary">Kategori Unggulan</h1>
+        <div class="text-zinc font-medium text-xl flex justify-between mb-10 font-inter">
             <h1>Temukan kategori yang anda inginkan</h1>
             <a href="/produk" class="flex gap-2 items-center">Lihat Koleksi <x-svg-arrow-right /></a>
         </div>
