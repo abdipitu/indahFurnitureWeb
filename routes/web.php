@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\LandingPageController;
@@ -50,3 +51,6 @@ Route::get('/card', [ProdukController::class, 'card'])->name('card');
 Route::get('/testket', [ProdukController::class, 'testket'])->name('testket');
 // Route::get('/', [ProdukController::class, 'testket'])->name('testket');
 
+Route::post('/cart/add', [CartController::class, 'addToCart'])->name('cart.add');
+Route::post('/checkout', [CartController::class, 'checkout'])->name('checkout');
+Route::get('/cart', [CartController::class, 'viewCart'])->name('cart.view');

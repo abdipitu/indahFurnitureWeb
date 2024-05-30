@@ -24,7 +24,7 @@
                                             Register
                                         </a>
                                     @endif --}}
-                                {{-- @endauth
+{{-- @endauth
                             </nav>
                         @endif
 </div> --}}
@@ -33,10 +33,14 @@
     @if (Route::has('login'))
         <div>
             @auth
-            <a href="{{ url('/dashboard') }}"><x-profil-user /></a>
+                @if (Auth::user()->role === 'admin')
+                    <a href="{{ url('/dashboard') }}"><x-profil-user /></a>
+                @else
+                    <a href="{{ url('/user') }}"><x-profil-user /></a>
+                @endif
             @else
-            <a href="{{ route('login') }}">{{ __('Login') }}</a>
-            @endif
-        </div>
+                <a href="{{ route('login') }}">{{ __('Login') }}</a>
+        @endif
+    </div>
     @endif
-</div>
+    </div>
