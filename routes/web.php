@@ -3,6 +3,7 @@
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\LandingPageController;
@@ -16,9 +17,11 @@ Route::get('/dashboard', function () {
     return view('dashboard.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/user', function () {
-    return view('pengguna.dashboard');
-})->middleware(['auth', 'verified'])->name('user');
+// Route::get('/user', function () {
+//     return view('pengguna.dashboard');
+// })->middleware(['auth', 'verified'])->name('user');
+
+Route::get('/user', [UserController::class, 'index'])->name('user')->middleware('auth');
 
 Route::get('/transaksi', function () {
     return view('dashboard.transaksi');
@@ -52,5 +55,6 @@ Route::get('/testket', [ProdukController::class, 'testket'])->name('testket');
 // Route::get('/', [ProdukController::class, 'testket'])->name('testket');
 
 Route::post('/cart/add', [CartController::class, 'addToCart'])->name('cart.add');
-Route::post('/checkout', [CartController::class, 'checkout'])->name('checkout');
+Route::post('/cart/checkout', [CartController::class, 'checkout'])->name('checkout');
 Route::get('/cart', [CartController::class, 'viewCart'])->name('cart.view');
+

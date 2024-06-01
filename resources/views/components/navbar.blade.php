@@ -24,9 +24,9 @@
                             <div class="dropdown dropdown-hover">
                                 <label class="my-2" tabindex="0">Produk</label>
                                 <div class="dropdown-menu dropdown-menu-bottom-right">
-                                    <a class="dropdown-item text-sm" href="#">Kursi</a>
-                                    <a tabindex="-1" class="dropdown-item text-sm" href="#">Sofa</a>
-                                    <a tabindex="-1" class="dropdown-item text-sm" href="#">Almari</a>
+                                    <a class="dropdown-item text-sm" href="/produk">Kursi</a>
+                                    <a tabindex="-1" class="dropdown-item text-sm" href="/produk">Sofa</a>
+                                    <a tabindex="-1" class="dropdown-item text-sm" href="/produk">Almari</a>
                                 </div>
                             </div>
                         </div>

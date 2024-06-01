@@ -34,7 +34,11 @@
                     <p>{{ $produk->keterangan }}</p>
                 </div>
                 <div>
-                    <x-button-keranjang></x-button-keranjang>
+                    <form action="/cart/add" method="post">
+                        @csrf
+                        <input type="hidden" name="id" value="{{ $produk->id }}">
+                        <x-button-keranjang></x-button-keranjang>
+                    </form>
                 </div>
             </div>
         </div>
